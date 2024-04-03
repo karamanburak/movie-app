@@ -18,7 +18,7 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
-  const { currentUser } = useAuthContext()
+  const { currentUser,logout } = useAuthContext()
   return (
     <Disclosure as="nav" className="bg-neutral-100 dark:bg-gray-800 py-3 dark:text-white fixed top-0 z-30 w-full">
       <div className="mx-auto px-2 sm:px-6 lg:px-8">
@@ -59,6 +59,7 @@ export default function Navbar() {
                         <Link
                           to="/"
                           className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          onClick={logout}
                         >
                           Sign out
                         </Link>
