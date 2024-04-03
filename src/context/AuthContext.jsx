@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../auth/firebase";
+import { useNavigate } from "react-router-dom";
 
 //! create context \\
 const AuthContext = createContext()
@@ -8,15 +9,19 @@ const AuthContext = createContext()
 //! context provider \\ 
 const AuthContextProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState("")
+    const navigate = useNavigate()
 
     const register = async (email, password, displayName) => {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password)
         await updateProfile(auth.currentUser, {
             displayName: displayName
         })
+        navigate("/")
     }
     const login = async (email, password) => {
         await signInWithEmailAndPassword(auth, email, password)
+        navigate("/")
+
     }
 
     const logout = () => {

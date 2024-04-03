@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Main from "../pages/Main";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
@@ -9,7 +9,7 @@ import Navbar from "../components/Navbar";
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <>
     <Navbar/>
       <Routes>
         <Route path="/" element={<Main/>}/>
@@ -19,7 +19,7 @@ const AppRouter = () => {
         <Route path="" element={<MovieDetail/>}/>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </>
     )
 };
 
