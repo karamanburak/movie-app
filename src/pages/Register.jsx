@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import GoogleIcon from "../assets/icons/GoogleIcon";
 import { useAuthContext } from "../context/AuthContext";
-
+import { BsTwitterX } from "react-icons/bs";
 const Register = () => {
-  const { register, signGoogleProvider } = useAuthContext()
+  const { register, signGoogleProvider, signTwitterProvider } = useAuthContext()
   // const [email,setEmail] = useState("")
   // const [password,setPassword] = useState("")
   // const [firstName,setFirstName] = useState("")
@@ -86,6 +86,10 @@ const Register = () => {
           <button onClick={signGoogleProvider} className="btn-danger flex justify-evenly" type="button">
             Continue with Google
             <GoogleIcon color="currentColor" />
+          </button>
+          <button onClick={signTwitterProvider} target="_blank" className="btn-danger flex justify-around" type="button">
+            Continue with Twitter
+            <BsTwitterX fontSize="1.5rem" />
           </button>
         </form>
       </div>

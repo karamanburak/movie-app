@@ -1,15 +1,18 @@
 import {
     GoogleAuthProvider,
+    TwitterAuthProvider,
     createUserWithEmailAndPassword,
     onAuthStateChanged,
     signInWithEmailAndPassword,
     signInWithPopup,
+    signInWithRedirect,
     signOut,
     updateProfile
 } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../auth/firebase";
 import { useNavigate } from "react-router-dom";
+import { toastSuccessNotify } from "../helpers/toastNotify";
 
 //! create context \\
 const AuthContext = createContext()
@@ -25,21 +28,34 @@ const AuthContextProvider = ({ children }) => {
             displayName: displayName
         })
         navigate("/")
+        toastSuccessNotify("Registred!")
     }
     const login = async (email, password) => {
         await signInWithEmailAndPassword(auth, email, password)
         navigate("/")
+        toastSuccessNotify("Logged in!")
+
 
     }
 
     const logout = () => {
         signOut(auth)
+        toastSuccessNotify("Logged out!")
     }
 
     const signGoogleProvider = async () => {
         try {
             const provider = new GoogleAuthProvider();
            await signInWithPopup(auth, provider)
+            navigate("/")
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    const signTwitterProvider = async () => {
+        try {
+            const provider = new TwitterAuthProvider();          
+            await signInWithPopup(auth, provider)
             navigate("/")
         } catch (error) {
             console.log(error);
@@ -70,7 +86,8 @@ const AuthContextProvider = ({ children }) => {
         register,
         login,
         logout,
-        signGoogleProvider
+        signGoogleProvider,
+        signTwitterProvider
     }}>{children}</AuthContext.Provider>
 }
 
