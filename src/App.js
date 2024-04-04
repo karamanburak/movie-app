@@ -4,16 +4,19 @@ import AuthContextProvider from "./context/AuthContext";
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MovieContextProvider from "./context/MovieContext";
 
 const App = () => {
   return (
     <div>
-    <BrowserRouter>
-    <AuthContextProvider>
-      <AppRouter />
-      <ToastContainer/>
-    </AuthContextProvider>
-    </BrowserRouter>
+      <BrowserRouter>
+        <AuthContextProvider>
+          <MovieContextProvider>
+            <AppRouter />
+            <ToastContainer />
+          </MovieContextProvider>
+        </AuthContextProvider>
+      </BrowserRouter>
     </div>
   );
 };
