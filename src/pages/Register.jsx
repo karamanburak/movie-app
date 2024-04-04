@@ -3,7 +3,7 @@ import GoogleIcon from "../assets/icons/GoogleIcon";
 import { useAuthContext } from "../context/AuthContext";
 
 const Register = () => {
-  const  {register} = useAuthContext()
+  const { register, signGoogleProvider } = useAuthContext()
   // const [email,setEmail] = useState("")
   // const [password,setPassword] = useState("")
   // const [firstName,setFirstName] = useState("")
@@ -83,7 +83,7 @@ const Register = () => {
             <label htmlFor="password">Password</label>
           </div>
           <button className="btn-danger" type="submit">Register</button>
-          <button className="btn-danger flex justify-evenly" type="button">
+          <button onClick={signGoogleProvider} className="btn-danger flex justify-evenly" type="button">
             Continue with Google
             <GoogleIcon color="currentColor" />
           </button>
