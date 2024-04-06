@@ -1,11 +1,14 @@
 import React from "react";
 import { useMovieContext } from "../context/MovieContext";
 import MovieCard from "../components/MovieCard";
+import SearchInput from "../components/SearchInput";
 
 const Main = () => {
   const {movies,loading} = useMovieContext()
   console.log("MAIN",movies);
-  return <>
+  return (
+  <>
+  <SearchInput/>
     <div className="flex justify-center flex-wrap">
   {
     loading ? (
@@ -14,7 +17,7 @@ const Main = () => {
         movies?.map((movie) => <MovieCard key={movie.id} {...movie} />)
     )}
     </div> 
-  </>
+  </>)
 };
 
 export default Main;
