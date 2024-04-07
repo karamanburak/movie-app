@@ -32,7 +32,8 @@ SOLUTION
 │    │     ├── Switch.jsx
 │    │     └── VideoSection.js
 │    ├── context
-│    │     └── AuthContext.js
+│    │     ├── AuthContext.js
+│    │     └── MovieContext.jsx
 │    ├── helpers
 │    │     └── toastNotify.js
 │    ├── pages
