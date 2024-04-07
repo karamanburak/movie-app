@@ -1,4 +1,8 @@
 # movie-app-react
+  <div style="text-align:center;">
+    <img src="https://i.imgur.com/waxVImv.png" alt="Colorful Stick">
+</div>
+
 
 ## Description
 A multi-page react movie project where you can access many details and trailers about the desired movie using the tmdb api.
@@ -56,7 +60,8 @@ SOLUTION
 
 ## Expected Outcome
 
-![Project Snapshot](movie.gif)
+![Project Snapshot](https://github.com/karamanburak/movie-app-react/assets/150926922/d1f623ba-4882-40b1-9555-26faefdac5b4)
+
 
 ## Objective
 
