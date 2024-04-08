@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 const MovieContext = createContext()
 
 const API_KEY = process.env.REACT_APP_TMDB_KEY;
-const url = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`
+const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1&api_key=${API_KEY}`
 
 const MovieContextProvider = ({children}) => {
     const [movies,setMovies] = useState([])
