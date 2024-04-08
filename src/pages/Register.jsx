@@ -88,7 +88,7 @@ const Register = () => {
             <GoogleIcon color="currentColor" />
           </button>
           <button onClick={signTwitterProvider} target="_blank" className="btn-danger flex justify-around" type="button">
-            Continue with Twitter
+            Continue with X
             <BsTwitterX fontSize="1.5rem" />
           </button>
         </form>
