@@ -68,6 +68,7 @@ const AuthContextProvider = ({ children }) => {
             navigate("/")
         } catch (error) {
             console.log(error);
+            toastErrorNotify(error.message)
         }
     }
 
