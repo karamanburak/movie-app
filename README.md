@@ -40,6 +40,7 @@ SOLUTION
 │    │     ├── Login.jsx
 │    │     ├── Main.jsx
 │    │     ├── MovieDetail.jsx
+│    │     ├── NotFound.jsx
 │    │     └── Register.jsx
 │    ├── router
 │    │     ├── AppRouter.jsx
