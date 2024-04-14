@@ -27,8 +27,8 @@ const MovieCard = ({ id, poster_path, overview, vote_average, title }) => {
             <div className="movie-over text-2xl gap-5">
                 <h2 className="text-red-600 font-bold">{title}</h2>
                 <p >  {"Rate : " + (vote_average).toFixed(1)}</p>
-                <p className="text-base">{overview}</p>
-                <button className="bg-green-500 p-4 rounded-md text-lg" onClick={() => navigate("/details/" + id)}> View Details</button>
+                <p className="text-sm">{overview}</p>
+                <button className="bg-green-500 p-4 rounded-md text-lg absolute bottom-3" onClick={() => navigate("/details/" + id)}> View Details</button>
             </div>
         </div>
     );
