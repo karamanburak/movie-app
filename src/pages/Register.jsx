@@ -82,8 +82,10 @@ const Register = () => {
               placeholder=" " />
             <label htmlFor="password">Password</label>
           </div>
-          <button className="btn-danger" type="submit">Register</button>
-          <button onClick={signGoogleProvider} className="btn-danger flex justify-evenly" type="button">
+          <button disabled={!info.firstName || !info.lastName || !info.password || !info.email} className="btn-danger disabled:opacity-70 cursor-default" type="submit">Register</button>
+          <button 
+          onClick={signGoogleProvider} 
+            className="btn-danger flex justify-evenly">
             Continue with Google
             <GoogleIcon color="currentColor" />
           </button>

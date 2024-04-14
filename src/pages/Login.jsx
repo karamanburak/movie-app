@@ -51,7 +51,9 @@ const Login = () => {
               placeholder=" " />
             <label htmlFor="password">Password</label>
           </div>
-          <button className="btn-danger" type="submit">Login</button>
+          <button 
+          disabled={ !info.password || !info.email} 
+          className="btn-danger disabled:opacity-70 cursor-default" type="submit">Login</button>
           <button onClick={signGoogleProvider} className="btn-danger flex justify-evenly" type="button">
             Continue with Google
             <GoogleIcon color="currentColor" />
