@@ -21,7 +21,7 @@ const MovieCard = ({ id, poster_path, overview, vote_average, title }) => {
                 alt="movie-card"
             />
             <div className="flex align-baseline justify-between p-1 text-white">
-                <h5>{title}</h5>
+                <h5 className="text-center">{title}</h5>
                 {currentUser && <span className={`tag ${tagColor}`}>{vote_average.toFixed(1)}</span>}
             </div>
             <div className="movie-over text-2xl gap-5">
