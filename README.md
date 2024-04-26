@@ -1,6 +1,5 @@
 # movie-app-react
   <div style="text-align:center;">
-    <img src="https://i.imgur.com/waxVImv.png" alt="Colorful Stick">
 </div>
 
 
