@@ -8,7 +8,7 @@ A multi-page react movie project where you can access many details and trailers 
 Firebase, toastify, tailwind.css were used in this project.
 
 ## Demo
-<a href="https://movie-app-react-gilt.vercel.app/" target="_blank">Movie App</a>
+<a href="https://cinemaparadiso.vercel.app/" target="_blank">Movie App</a>
 
 ## Project Skeleton
 
