@@ -4,8 +4,7 @@
 
 
 ## Description
-A multi-page react movie project where you can access many details and trailers about the desired movie using the tmdb api.
-Firebase, toastify, tailwind.css were used in this project.
+A react movie project where you can access many details and trailers about the desired movie using tmdb api. Firebase, toastify, tailwind.css were used in this project.
 
 ## Demo
 <a href="https://cinemaparadiso.vercel.app/" target="_blank">Movie App</a>
