@@ -1,13 +1,12 @@
 # movie-app-react
-  <div style="text-align:center;">
-</div>
 
+ [Movie App Live](https://cinemaparadiso.vercel.app/)
+
+
+<a href="https://cinemaparadiso.vercel.app/" target="_blank"></a>
 
 ## Description
 A react movie project where you can access many details and trailers about the desired movie using tmdb api. Firebase, toastify, tailwind.css were used in this project.
-
-## Demo
-<a href="https://cinemaparadiso.vercel.app/" target="_blank">Movie App</a>
 
 ## Project Skeleton
 
